@@ -22,20 +22,8 @@
       </div>
     </header>
 
-    <script>
-      function toggleMenu() {
-        const navLinks = document.getElementById("navLinks");
-        navLinks.classList.toggle("show");
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.querySelector(".menu-btn");
-        menuBtn.addEventListener("click", toggleMenu);
-      });
-    </script>
-
     <nav class="navbar">
-        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+        <button class="menu-btn" id="menuToggle">&#9776;</button>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.htm">About Me</a></li>
             <li><a href="research.htm">Research</a></li>
@@ -155,5 +143,28 @@
         scrollRevelation('.card');
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuBtn = document.getElementById("menuToggle");
+          const navLinks = document.getElementById("navLinks");
+
+          if (!menuBtn || !navLinks) {
+              console.error("Menu button or navigation links not found.");
+              return;
+          }
+
+          menuBtn.addEventListener("click", function () {
+              navLinks.classList.toggle("show");
+
+              // Change ☰ to ✖ when menu is open
+              if (navLinks.classList.contains("show")) {
+                  menuBtn.innerHTML = "&#10006;"; // Close icon
+              } else {
+                  menuBtn.innerHTML = "&#9776;"; // Menu icon
+              }
+          });
+      });
+    </script>
+
   </body>
 </html>
