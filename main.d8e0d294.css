@@ -4201,6 +4201,7 @@ label {
 table.resource {
   border: 2px solid black; /* sets a black border around the table */
   border-collapse: collapse; /* ensures borders are merged */
+  font-size: 0.9em;
 }
 
 /* Applies to table cells (both <td> and <th>) */
@@ -4208,6 +4209,7 @@ table.resource td,
 table.resource th {
   border: 1px solid black; /* sets a black border around each cell */
   padding: 3px;
+  font-size: 0.9em;
 }
 
 a.blank_anchor:link { text-decoration:none; color:#000000; }
