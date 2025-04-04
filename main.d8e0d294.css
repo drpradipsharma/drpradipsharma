@@ -4217,4 +4217,9 @@ a.blank_anchor:visited { text-decoration:none; color:#000000; }
 a.blank_anchor:hover { text-decoration:none; color:#000000; }
 a.blank_anchor:active { text-decoration:none; color:#000000; }
 
+a.blank_head:link { text-decoration:none; color:#ffffff; }
+a.blank_head:visited { text-decoration:none; color:#ffffff; }
+a.blank_head:hover { text-decoration:none; color:#ffffff; }
+a.blank_head:active { text-decoration:none; color:#ffffff; }
+
 /*# sourceMappingURL=main.bc58148c.map*/
